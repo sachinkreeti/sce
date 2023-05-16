@@ -87,3 +87,15 @@ function sum(...args) {
 var value = sum(2,3,4,5,6,7,7,100);
 console.log('total', value);
 
+var sum = function (a, b) {
+  return a + b;
+}
+
+// arrow function
+var sum = (a, b) => {
+  return a + b;
+}
+
+// modify arrow function to return if only one line of code is present
+var sum = (a, b) => a + b;
+
