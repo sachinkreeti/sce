@@ -49,5 +49,20 @@ person4.address.pinCode = 565656
 console.log('person4', person4);
 
 
+// Function
+// normal function
+function sum(a, b) {
+  return a + b;
+}
 
+sum(5, 6);
+sum(5, 6, 7) // Error: wrong number of argument passed
+
+// function with optional argument
+function sum(a, b, c = 5) {
+  return a + b + c;
+}
+
+sum(5, 6);
+sum(5, 6, 7) // No error
 
