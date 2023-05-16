@@ -29,5 +29,25 @@ console.log(person.fullName());
 // adding more attribute
 person.language = 'Hindi'
 
-// Function
+// Reference
+// both are pointing to the same reference
+var person2 = person
+
+person2.name = 'Mohan' // this will modify person too
+
+// to copy object at one level
+var person3 = { ...person }
+
+// modifying a shallow copied object
+person3.name = 'Bob' // this does not modify either person or person2
+
+// modifying nested object
+person3.address.pinCode = 121212 // this will modify person & person2 both
+
+var person4 = { ...person, address: { ...person.address } };
+person4.address.pinCode = 565656
+console.log('person4', person4);
+
+
+
 
