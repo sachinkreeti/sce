@@ -66,3 +66,24 @@ function sum(a, b, c = 5) {
 sum(5, 6);
 sum(5, 6, 7) // No error
 
+// function with spread operator
+function foo(a, ...rest) {
+  console.log(a)
+  console.log(rest)
+}
+
+foo(2,3,4,5)
+
+function sum(...args) {
+  var total = 0;
+
+  for (var i =0; i< args.length; i++) {
+    total = total + args[i];
+  }
+
+  return total;
+}
+
+var value = sum(2,3,4,5,6,7,7,100);
+console.log('total', value);
+
