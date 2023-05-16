@@ -99,3 +99,13 @@ var sum = (a, b) => {
 // modify arrow function to return if only one line of code is present
 var sum = (a, b) => a + b;
 
+
+// setTimeout
+setTimeout(function () {
+  console.log("Hello World");
+}, 3000)
+
+// setInterval
+setInterval(function () {
+  console.log("Hello World");
+}, 3000)
