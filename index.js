@@ -48,6 +48,15 @@ var person4 = { ...person, address: { ...person.address } };
 person4.address.pinCode = 565656
 console.log('person4', person4);
 
+// assigning fname and lname
+var fname = person.fname;
+var lname = person.lname;
+
+// destructuring
+var { fname, lname } = person;
+console.log('fname', fname);
+console.log('lname', lname);
+
 
 // Function
 // normal function
