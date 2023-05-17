@@ -1,8 +1,9 @@
-// Hoisting
-// moves variable declarations to the top
+var a;
+let b;
+const c;
 
-function foo() {
-  var a = 10;
-  let b = 20;
-  const c = 30;
-}
+debugger;
+
+a = 10;
+b = 20;
+c = 30;

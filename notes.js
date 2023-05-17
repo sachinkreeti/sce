@@ -241,3 +241,12 @@ fetch('https://reqbin.com/echo/get/json', {
 })
   .then(response => response.json())
   .then(response => console.log(JSON.stringify(response)))
+
+
+// hoisting
+console.log('a', a);
+debugger;
+
+var a = 10;
+let b = 20;
+const c = 30;
