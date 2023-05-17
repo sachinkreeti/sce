@@ -101,11 +101,24 @@ var sum = (a, b) => a + b;
 
 
 // setTimeout
+setTimeout(func, time_in_millisecond)
+
 setTimeout(function () {
   console.log("Hello World");
 }, 3000)
 
+function helloWorld() {
+  console.log("Hello World");
+}
+
+setTimeout(helloWorld, 3000);
+
+
 // setInterval
+setInterval(func, time_in_millisecond)
+
 setInterval(function () {
   console.log("Hello World");
-}, 3000)
+}, 3000);
+
+setInterval(helloWorld, 3000);
