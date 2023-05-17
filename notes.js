@@ -51,8 +51,19 @@ console.log('person4', person4);
 // assigning fname and lname
 var fname = person.fname;
 var lname = person.lname;
+var pinCode = person.address.pinCode;
+
+
+var a = person.fname;
+var b = person.lname;
 
 // destructuring
+var { fname: a, lname: b } = person;
+var { fname: fname, lname: lname } = person;
+var { fname, lname } = person;
+
+
+
 var { fname, lname } = person;
 console.log('fname', fname);
 console.log('lname', lname);
