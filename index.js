@@ -99,7 +99,7 @@ var sum = (a, b) => {
 // modify arrow function to return if only one line of code is present
 var sum = (a, b) => a + b;
 
-
+// ================================================================
 // setTimeout
 setTimeout(func, time_in_millisecond)
 
@@ -122,3 +122,76 @@ setInterval(function () {
 }, 3000);
 
 setInterval(helloWorld, 3000);
+
+// ================================================================
+// Scope
+function sum() {
+  var a = 5;
+  var b = 10;
+  return a + b;
+}
+
+function sum() {
+  let a = 5;
+  let b = 10;
+  return a + b;
+}
+
+function sum() {
+  var a = 5;
+  var b = 10;
+
+  if(a > 2) {
+    var c = 10;
+  }
+
+  console.log('a, b, c', a, b, c);
+
+  return a + b + c;
+}
+
+function sum() {
+  var a = 5;
+  var b = 10;
+
+  if(a > 100) {
+    var c = 10;
+  }
+
+  console.log('a, b, c', a, b, c);
+
+  return a + b + c;
+}
+
+function sum() {
+  let a = 5;
+  let b = 10;
+
+  if(a > 2) {
+    let c = 10;
+  }
+
+  console.log('a, b, c', a, b, c);
+
+  return a + b + c;
+}
+
+// Closure - passing and returning functions - counter example
+function counter() {
+  var count = 0;
+
+  function increment() {
+    count++;
+    console.log('count', count);
+  }
+
+  return increment;
+}
+
+var incrementOuter = counter()
+incrementOuter();
+
+// Promise
+// Fetch
+// JS-single threaded
+// Uncaught ReferenceError: c is not defined
