@@ -70,7 +70,7 @@ console.log('lname', lname);
 
 
 // Function
-// normal function
+// 1. normal function
 function sum(a, b) {
   return a + b;
 }
@@ -107,17 +107,65 @@ function sum(...args) {
 var value = sum(2,3,4,5,6,7,7,100);
 console.log('total', value);
 
+// 2. second way of declaring function (maybe it is called function statement - verify)
 var sum = function (a, b) {
   return a + b;
 }
 
-// arrow function
+// 3. arrow function
 var sum = (a, b) => {
   return a + b;
 }
 
 // modify arrow function to return if only one line of code is present
 var sum = (a, b) => a + b;
+
+
+function foo() {
+  console.log('foo was called');
+}
+
+function bar() {
+  console.log('bar was called');
+}
+
+foo()
+bar()
+
+// function calling another function
+function foo(func1) {
+  func1()
+  console.log('foo was called');
+}
+
+function bar() {
+  console.log('bar was called');
+}
+
+foo(bar);
+
+// passing function as an argument
+function operation(a, b, func) {
+  func(a,b)
+}
+
+function sum(a,b) {
+  console.log('sum', a+b);
+}
+
+operation(2,3,sum);
+
+// returning a function
+function greet(prefix) {
+  function greetPerson(name) {
+    console.log(prefix + ' ' + name);
+  }
+
+  return greetPerson;
+}
+
+var greetPerson = greet('Good Morning');
+greetPerson('Ram');
 
 // ================================================================
 // setTimeout
