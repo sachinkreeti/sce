@@ -304,3 +304,16 @@ debugger;
 var a = 10;
 let b = 20;
 const c = 30;
+
+// blocking a thread
+// for(var i = 1; i < 100000; i++) {
+//   for(var j = 1; j < 100000; j++) {
+//     for(var k = 1; k < 100000; k++) {
+//       for(var l = 1; l < 100000; l++) {
+//         var x = 89304;
+//         var y = 9999;
+//         var z = x * y;
+//       }
+//     }
+//   }
+// }
