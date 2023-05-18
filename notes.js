@@ -292,14 +292,9 @@ incrementOuter();
 // JS-single threaded
 // Uncaught ReferenceError: c is not defined
 
-fetch('https://reqbin.com/echo/get/json', {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json',
-    },
-})
-  .then(response => response.json())
-  .then(response => console.log(JSON.stringify(response)))
+fetch('https://dummyjson.com/products/1')
+  .then(res => res.json())
+  .then(json => console.log(json))
 
 
 // hoisting
