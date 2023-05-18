@@ -118,39 +118,3 @@ console.log('person4', person4);
 person4.address.city = 'Hyderabad'
 
 console.log('person1', person1);
-
-
-// ==============
-
-function foo() {
-  console.log('foo was called');
-}
-
-function bar() {
-  console.log('bar was called');
-}
-
-foo()
-bar()
-
-function foo(func1) {
-  func1()
-  console.log('foo was called');
-}
-
-function bar() {
-  console.log('bar was called');
-}
-
-foo(bar);
-
-function operation(a, b, func) {
-  func(a,b)
-}
-
-function sum(a,b) {
-  console.log('sum', a+b);
-}
-
-operation(2,3,sum);
-
