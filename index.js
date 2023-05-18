@@ -1,9 +1,3 @@
-var a;
-let b;
-const c;
-
-debugger;
-
-a = 10;
-b = 20;
-c = 30;
+var heading = document.getElementById('heading');
+console.log('heading', heading);
+heading.innerHTML = 'Hello JS';
